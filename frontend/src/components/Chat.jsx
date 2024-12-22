@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:4000'); // Adjust URL as necessary
+const socket = io('https://med-chain-updated.onrender.com'); // Adjust URL as necessary
 
 function Chat() {
   const [messages, setMessages] = useState([]);

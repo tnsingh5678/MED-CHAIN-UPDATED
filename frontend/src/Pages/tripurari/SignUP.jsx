@@ -46,7 +46,7 @@ function SignUp() {
         ...(isHospital && { address: formData.address }) // Add address if hospital
       };
       
-      const response = await axios.post('http://localhost:4000/signup', payload);
+      const response = await axios.post('https://med-chain-updated.onrender.com/signup', payload);
       console.log(response.data);
 
       if (response.data.success) {
@@ -64,7 +64,7 @@ function SignUp() {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
       const emailFromGoogle = decoded.email;
-      axios.post('http://localhost:5000/api/users', { email: emailFromGoogle })
+      axios.post('https://med-chain-updated.onrender.com/api/users', { email: emailFromGoogle })
         .then(response => {
           if (response.data.done) {
             navigate(`/hospital/${emailFromGoogle}`);

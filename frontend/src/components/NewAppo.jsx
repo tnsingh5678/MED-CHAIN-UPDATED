@@ -20,7 +20,7 @@ const NewAppo = ({ userName }) => {
 
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/user-details1`, {
+        const response = await axios.get(`https://med-chain-updated.onrender.com/user-details1`, {
           params: { name: userName },
         });
         console.log('User details response:', response.data);
@@ -45,7 +45,7 @@ const NewAppo = ({ userName }) => {
   useEffect(() => {
     const fetchHospitals = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/hospitals?name=${hospitalName}`);
+        const response = await axios.get(`https://med-chain-updated.onrender.com/hospitals?name=${hospitalName}`);
         setHospitals(response.data);
       } catch (error) {
         console.error("Error fetching hospitals:", error);
@@ -59,7 +59,7 @@ const NewAppo = ({ userName }) => {
     if (selectedHospital) {
       const fetchDoctors = async () => {
         try {
-          const response = await axios.get(`http://localhost:4000/hospital/${selectedHospital}/doctor`);
+          const response = await axios.get(`https://med-chain-updated.onrender.com/hospital/${selectedHospital}/doctor`);
           setDoctors(response.data);
         } catch (error) {
           console.error("Error fetching doctors:", error);
@@ -94,7 +94,7 @@ const NewAppo = ({ userName }) => {
       });
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/updateUserDetails",
+        "https://med-chain-updated.onrender.com/api/updateUserDetails",
         formData,
         {
           withCredentials: true,

@@ -28,7 +28,7 @@ const HospitalDetails = () => {
         setHospital(null);
 
         try {
-            const response = await axios.get(`http://localhost:4000/api/hospitals/${name}`);
+            const response = await axios.get(`https://med-chain-updated.onrender.com/api/hospitals/${name}`);
             setHospital(response.data);
         } catch (err) {
             setError(err.response ? err.response.data.error : 'An error occurred');
@@ -54,7 +54,7 @@ const HospitalDetails = () => {
         formData.append('file', selectedFile);
 
         try {
-            await axios.post(`http://localhost:4000/api/hospitals/${name}/users/${userName}/upload`, formData, {
+            await axios.post(`https://med-chain-updated.onrender.com/api/hospitals/${name}/users/${userName}/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

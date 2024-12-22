@@ -16,7 +16,7 @@ const NewAppo1 = () => {
   useEffect(() => {
     const fetchHospitals = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/hospitals?name=${hospitalName}`);
+        const response = await axios.get(`https://med-chain-updated.onrender.com/hospitals?name=${hospitalName}`);
         setHospitals(response.data);
       } catch (error) {
         console.error("Error fetching hospitals:", error);
@@ -30,7 +30,7 @@ const NewAppo1 = () => {
     if (selectedHospital) {
       const fetchDoctors = async () => {
         try {
-          const response = await axios.get(`http://localhost:4000/hospital/${selectedHospital}/doctor`);
+          const response = await axios.get(`https://med-chain-updated.onrender.com/hospital/${selectedHospital}/doctor`);
           setDoctors(response.data);
         } catch (error) {
           console.error("Error fetching doctors:", error);
@@ -65,7 +65,7 @@ const NewAppo1 = () => {
       });
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/submit31",
+        "https://med-chain-updated.onrender.com/api/submit31",
         formData,
         {
           withCredentials: true,

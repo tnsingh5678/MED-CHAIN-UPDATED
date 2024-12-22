@@ -39,7 +39,7 @@ const OCRComponent = () => {
 
       // Send OCR result to AI for analysis
       setAiLoading(true); // Start AI loading
-      const aiResult = await axios.post('http://localhost:4000/prescription', {
+      const aiResult = await axios.post('https://med-chain-updated.onrender.com/prescription', {
         userInput: extractedText
       });
 

@@ -37,7 +37,7 @@ const NewAppointmentForm = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/submit",
+        "https://med-chain-updated.onrender.com/submit",
         {
           name,
           password,

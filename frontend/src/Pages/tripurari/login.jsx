@@ -15,7 +15,7 @@ function Login() {
         console.log('Retrieved token:', token);
 
         if (token) {
-            axios.post('http://localhost:4000/check-token', { token })
+            axios.post('https://med-chain-updated.onrender.com/check-token', { token })
                 .then((response) => {
                     console.log('Token validation response:', response.data.user);
 
@@ -38,7 +38,7 @@ function Login() {
     const handleLocalLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:4000/user-details1`, {
+            const response = await axios.get(`https://med-chain-updated.onrender.com/user-details1`, {
                 params: { email }
             });
             if (response.data.exists) {
@@ -60,7 +60,7 @@ function Login() {
         try {
             const decoded = jwtDecode(credentialResponse.credential);
             const email = decoded.email;
-            const response = await axios.get(`http://localhost:4000/user-details1/${email}`)
+            const response = await axios.get(`https://med-chain-updated.onrender.com/user-details1/${email}`)
 
 
                 

@@ -13,7 +13,7 @@ const Appointment = () => {
     console.log('Retrieved token:', token);
 
     if (token) {
-        axios.post('http://localhost:4000/check-token', { token })
+        axios.post('https://med-chain-updated.onrender.com/check-token', { token })
             .then((response) => {
                 console.log('Token validation response:', response.data);
 

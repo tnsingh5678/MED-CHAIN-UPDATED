@@ -11,7 +11,7 @@ const FileUpload = () => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (token) {
-            axios.post('http://localhost:4000/check-token', { token })
+            axios.post('https://med-chain-updated.onrender.com/check-token', { token })
                 .then((response) => {
                     if (response.data.valid) {
                         setUserName(response.data.user.name);
@@ -43,7 +43,7 @@ const FileUpload = () => {
         formData.append('file', file);
 
         try {
-            const response = await axios.post(`http://localhost:4000/api/hospitals/users/${userName}/upload`, formData, {
+            const response = await axios.post(`https://med-chain-updated.onrender.com/api/hospitals/users/${userName}/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

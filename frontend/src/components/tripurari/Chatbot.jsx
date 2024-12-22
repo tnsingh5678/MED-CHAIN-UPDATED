@@ -27,7 +27,7 @@ const Chatbot = () => {
 
   const getGeminiResponse = async (prompt) => {
     try {
-      const response = await fetch('http://localhost:4000/api/chat', {
+      const response = await fetch('https://med-chain-updated.onrender.com/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

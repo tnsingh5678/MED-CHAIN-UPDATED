@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
-import Chatbot from '../../components/vansh/Chatbot';
+import Chatbot from '../../components/tripurari/Chatbot';
 import Navbar from '../../components/Navbar'
 
 const UserDetails2 = () => {
@@ -18,7 +18,7 @@ const UserDetails2 = () => {
     const handleFetchUserDetails = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:4000/user-details1', {
+            const response = await axios.get('https://med-chain-updated.onrender.com/user-details1', {
                 params: { name }
             });
             setUser(response.data);
@@ -93,7 +93,7 @@ const UserDetails2 = () => {
                                                     user.files.filter(file => isPdf(file)).map((file, index) => (
                                                         <div key={index} className="mb-2">
                                                             <a
-                                                                href={`http://localhost:4000/uploads/${file}`}
+                                                                href={`https://med-chain-updated.onrender.com/uploads/${file}`}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="text-blue-600 hover:underline"
@@ -116,13 +116,13 @@ const UserDetails2 = () => {
                                                 user.files.filter(file => !isPdf(file)).map((file, index) => (
                                                     <div key={index} className="w-40 h-40 bg-gray-200 rounded-md overflow-hidden">
                                                         <a 
-                                                            href={`http://localhost:4000/uploads/${file}`} 
+                                                            href={`https://med-chain-updated.onrender.com/uploads/${file}`} 
                                                             target="_blank" 
                                                             rel="noopener noreferrer"
                                                             className="block w-full h-full"
                                                         >
                                                             <img 
-                                                                src={`http://localhost:4000/uploads/${file}`} 
+                                                                src={`https://med-chain-updated.onrender.com/uploads/${file}`} 
                                                                 alt={file}
                                                                 className="object-cover w-full h-full"
                                                             />

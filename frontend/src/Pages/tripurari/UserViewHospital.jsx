@@ -21,7 +21,7 @@ const HospitalDetail = () => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const response = await axios.post('http://localhost:4000/check-token', { token });
+          const response = await axios.post('https://med-chain-updated.onrender.com/check-token', { token });
           if (response.data.valid) {
             setUsername(response.data.user.name); // Extracted username
           } else {
@@ -41,7 +41,7 @@ const HospitalDetail = () => {
   useEffect(() => {
     const fetchHospitalDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/hospitals/${hospitalname}`);
+        const response = await axios.get(`https://med-chain-updated.onrender.com/api/hospitals/${hospitalname}`);
         setHospital(response.data);
         setLoading(false);
       } catch (error) {

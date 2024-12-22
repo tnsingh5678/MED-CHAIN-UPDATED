@@ -11,7 +11,7 @@ const CheckoutForm = () => {
   const { amount } = location.state || { amount: 7 }; // Default to 7 if no amount is passed
 
   const fetchClientSecret = useCallback(() => {
-    return fetch(`http://localhost:4000/api/payment/create-checkout-session`, {
+    return fetch(`https://med-chain-updated.onrender.com/api/payment/create-checkout-session`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
