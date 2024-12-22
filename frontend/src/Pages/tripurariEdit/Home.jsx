@@ -6,7 +6,7 @@ import Departments from "../../components/Departments";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-import Chatbot from '../../components/vansh/Chatbot';  // Import the Chatbot component
+import Chatbot from '../../components/tripurari/Chatbot';  // Import the Chatbot component
 
 const Home = () => {
   return (

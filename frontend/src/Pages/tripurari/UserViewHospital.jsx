@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import Chatbot from '../../components/vansh/Chatbot'; // Import the Chatbot component
+import Chatbot from '../../components/tripurari/Chatbot'; // Import the Chatbot component
 import Navbar from "../../components/Navbar";
 
 const HospitalDetail = () => {

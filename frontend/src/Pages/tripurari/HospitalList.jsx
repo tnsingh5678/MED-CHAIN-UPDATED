@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Chatbot from '../../components/vansh/Chatbot';  // Import the Chatbot component
+import Chatbot from '../../components/tripurari/Chatbot';  // Import the Chatbot component
 
 const HospitalList = () => {
   const [hospitals, setHospitals] = useState([]);
